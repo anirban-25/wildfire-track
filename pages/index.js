@@ -58,6 +58,7 @@ export default function Home({ exploreData }) {
           <h4 className="text-2xl font-semibold pb-5">
             Enter your location by Co-ordinates to know if you are safe or not
           </h4>
+          
           <input
             type="text"
             onChange={getData1}
@@ -76,6 +77,10 @@ export default function Home({ exploreData }) {
           >
             submit
           </button>
+          <a className="sticky left-0 ml-[20%] text-blue-800 hover:underline hover:text-blue-900" href="https://www.gps-coordinates.net/gps-coordinates-converter" target="_blank">
+            click this to find out your co-ordinates through your address
+          </a>
+          <h1 className="mb-3 text-gray-400">please wait for a few seconds after pressing the submit button while we fetch the data</h1>
         </section>
       </main>
     </div>
