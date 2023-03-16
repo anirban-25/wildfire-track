@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SmallCard from "../components/SmallCard";
 import { useRouter } from "next/router";
+import Header from "../components/Header";
 export default function FooterAgain({ exploreData, exploreDataWildFires }) {
   const router = useRouter();
   const {
@@ -11,15 +12,17 @@ export default function FooterAgain({ exploreData, exploreDataWildFires }) {
     data1,
     data2,
   };
+  var x = 0;
 
   return (
     <div>
+      <Header />
       <div>
         <h1 className="text-3xl ml-2 sticky top-0">
           Wildfires near-around ({data1},{data2}):
         </h1>
       </div>
-      <div className="flex">
+      <div className="flex flex-col">
         {
           <>
             {exploreDataWildFires?.map(
@@ -37,6 +40,9 @@ export default function FooterAgain({ exploreData, exploreDataWildFires }) {
           </>
         }
       </div>
+      <SmallCard
+        id= "hey"
+      />
     </div>
   );
 }
